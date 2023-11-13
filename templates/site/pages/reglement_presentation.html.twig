@@ -1,0 +1,87 @@
+{% extends 'site/pages/details.html.twig' %}
+ {% block menu %}
+ {{ include('site/_includes/header.html.twig',{'etat':2}) }}
+ {% endblock %}
+{% block page_content %}
+ <section class="inner-header divider parallax layer-overlay overlay-dark-5" data-stellar-background-ratio="0.5" data-bg-img="images/bg/bg11.jpg">
+      <div class="container pt-90 pb-30">
+        <!-- Section Content -->
+        <div class="section-content pt-100">
+          <div class="row"> 
+            <div class="col-md-12">
+              <h3 class="title text-white">Edition</h2>
+            </div>
+            <div class="col-md-12">
+              <ol class="breadcrumb text-center mt-10 white">
+                <li><a href="#">Accueil</a></li>
+                <li class="active">Les éditions</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>      
+    </section>
+  <section>
+      <div class="container">
+        <div class="section-content">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="thumb">
+                <img src="images/team/1.jpg" alt="">
+              </div>
+            </div>
+            <div class="col-md-8">
+              <h3 class="name font-28 text-gray mb-0 mt-0">Speaker</h3>
+              <h1 class="text-uppercase text-gray-darkgray font-48 mt-0">Olivia Grace</h1>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam vero expedita fugiat illo quasi doloremque, in unde omnis sint assumenda! Quaerat in, reprehenderit corporis voluptatum natus sequi reiciendis ullam. Quam eaque dolorum voluptates cupiditate explicabo.</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt culpa dicta quaerat qui recusandae possimus placeat quidem ipsam voluptates similique libero tempore, labore quasi delectus vero alias, consectetur blanditiis eum maxime sunt accusantium ipsa doloribus reiciendis. Ea quod reprehenderit deserunt. Veritatis omnis similique tempora delectus a consequuntur, quis.  Adipisicing elit. Nesciunt culpa dicta quaerat qui recusandae possimus placeat quidem ipsam voluptates similique libero tempore, labore quasi delectus vero alias.</p>
+              <a class="btn btn-default btn-theme-colored" href="#">Contact me for more info</a>
+            </div>
+          </div>
+          <div class="row mt-30">
+            <div class="col-md-12">
+              <div class="Speaker-address">
+                <div class="row">
+                  <div class="col-sm-4">
+                    <div class="media border-bottom p-15 mb-20 bg-light">
+                      <div class="media-body">
+                        <ul class="list-inline font-30 p-15">
+                          <li class="pl-15 pr-15"><a href="#"><i class="fa fa-facebook text-theme-colored"></i></a></li>
+                          <li class="pl-15 pr-15"><a href="#"><i class="fa fa-skype text-theme-colored"></i></a></li>
+                          <li class="pl-15 pr-15"><a href="#"><i class="fa fa-twitter text-theme-colored"></i></a></li>
+                          <li class="pl-15 pr-15"><a href="#"><i class="fa fa-skype text-theme-colored"></i></a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-4">
+                    <div class="media border-bottom p-15 mb-20 bg-light">
+                      <div class="media-left">
+                        <i class="fa fa-map-marker text-theme-colored font-24 mt-5"></i>
+                      </div>
+                      <div class="media-body">
+                        <h5 class="mt-0 mb-0">Address:</h5>
+                        <p>Village 856 Broadway King Street,<br>New York</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-4">
+                    <div class="media border-bottom p-15 bg-light">
+                      <div class="media-left">
+                        <i class="fa fa-phone text-theme-colored font-24 mt-5"></i>
+                      </div>
+                      <div class="media-body">
+                        <h5 class="mt-0 mb-0">Contact:</h5>
+                        <p><span>Phone:</span> +262 695 2601<br><span>Email:</span> you@yourdomain.com</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+{% endblock %}

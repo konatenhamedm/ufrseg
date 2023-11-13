@@ -1,0 +1,94 @@
+<div class="main-content">
+    <!-- Section: home -->
+   {{ include('site/_includes/children/slider.html.twig') }}
+    <!-- Section: About -->
+{{ include('site/_includes/children/about.html.twig') }}
+   
+    {{ include('site/_includes/children/post.html.twig') }}
+    <!-- Section: Schedule -->
+    
+   
+
+    <!-- Section: tickets -->
+    {{ include('site/_includes/children/chiffre.html.twig') }}
+    
+
+    <!-- Section: Subscribe -->
+    <section class="divider parallax layer-overlay overlay-dark" data-bg-img="images/bg/bg1.jpg">
+      <div class="container pb-90">
+          <div class="row">
+            <div class="col-md-12 text-center">
+              <h2 class="font-36 text-theme-colored mb-30">Inscrivez-vous à notre newsletter pour être toujours bien informé !</h2>
+            </div>
+          </div>
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2">
+            <form id="mailchimp-subscription-form2" class="newsletter-form">
+              <label for="mce-EMAIL"></label>
+              <div class="input-group">
+                <input type="email" id="mce-EMAIL" data-height="45px" class="form-control input-lg" placeholder="Entrez votre email" name="EMAIL" value="">
+                <span class="input-group-btn">
+                  <button type="submit" class="btn btn-theme-colored btn-lg m-0" data-height="45px">JE M'INSCRIS</button>
+                </span>
+              </div>
+            </form>
+
+            <!-- Mailchimp Subscription Form Validation-->
+            <script type="text/javascript">
+              $('#mailchimp-subscription-form2').ajaxChimp({
+                  callback: mailChimpCallBack,
+                  url: '//thememascot.us9.list-manage.com/subscribe/post?u=a01f440178e35febc8cf4e51f&amp;id=49d6d30e1e'
+              });
+
+              function mailChimpCallBack(resp) {
+                  // Hide any previous response text
+                  var $mailchimpform = $('#mailchimp-subscription-form2'),
+                      $response = '';
+                  $mailchimpform.children(".alert").remove();
+                  if (resp.result === 'success') {
+                      $response = '<div class="alert alert-success"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>' + resp.msg + '</div>';
+                  } else if (resp.result === 'error') {
+                      $response = '<div class="alert alert-danger"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>' + resp.msg + '</div>';
+                  }
+                  $mailchimpform.prepend($response);
+              }
+            </script>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: Event Facilities -->
+  {{ include('site/_includes/children/partenaire.html.twig') }}
+
+ 
+     <!-- Divider: Contact form -->
+    {{ include('site/_includes/children/contact.html.twig') }}
+
+    <!-- Section: Map -->
+    {# <section>
+      <div class="container-fluid p-0">
+        <!-- Google Map HTML Codes -->
+        <div 
+          data-address="121 King Street, Melbourne Victoria 3000 Australia"
+          data-popupstring-id="#popupstring1"
+          class="map-canvas autoload-map bg-theme-colored"
+          data-mapstyle="style1"
+          data-height="420"
+          data-latlng="-37.817314,144.955431"
+          data-title="sample title"
+          data-zoom="12"
+          data-marker="images/map-icon-blue.png">
+        </div>
+        <div class="map-popupstring hidden" id="popupstring1">
+          <div class="text-center">
+            <h3>NextEvent Office</h3>
+            <p>121 King Street, Melbourne Victoria 3000 Australia</p>
+            <!-- Google Map Javascript Codes -->
+            <script src="http://maps.google.com/maps/api/js?key=AIzaSyAYWE4mHmR9GyPsHSOVZrSCOOljk8DU9B4"></script>
+            <script src="js/google-map-init.js"></script>
+          </div>
+        </div>
+      </div>
+    </section> #}
+  </div>

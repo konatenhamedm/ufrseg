@@ -1,0 +1,142 @@
+{# <section id="contact" class="bg-light">
+      <div class="divider parallax layer-overlay overlay-darkblue" data-stellar-background-ratio="0.5" data-bg-img="images/bg/bg1.jpg">
+        <div class="container pt-50 pb-50">
+          <div class="section-title">
+            <div class="row">
+              <div class="col-md-6 col-md-offset-3 text-center">
+                <h2 class="title text-white mb-0">Contact</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h4 class="text-uppercase">Send Us a Messase</h4>
+            <div class="line-bottom mb-30"></div>
+
+            <!-- Contact Form -->
+            <form id="contact_form" name="contact_form" class="form-transparent" action="https://kodesolution.com/html/2016/nextevent-html/demo/includes/sendmail.php" method="post">
+              <div class="row">
+                <div class="col-sm-6">
+                  <div class="form-group">
+                    <input id="form_name" name="form_name" class="form-control" type="text" placeholder="Enter Name" required="">
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="form-group">
+                    <input id="form_email" name="form_email" class="form-control required email" type="email" placeholder="Enter Email">
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-6">
+                  <div class="form-group">
+                    <input id="form_subject" name="form_subject" class="form-control required" type="text" placeholder="Enter Subject">
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="form-group">
+                    <input id="form_phone" name="form_phone" class="form-control" type="text" placeholder="Enter Phone">
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <textarea id="form_message" name="form_message" class="form-control required" rows="5" placeholder="Enter Message"></textarea>
+              </div>
+              <div class="form-group">
+                <input id="form_botcheck" name="form_botcheck" class="form-control" type="hidden" value="" />
+                <button type="submit" class="btn btn-dark btn-theme-colored btn-flat mr-5" data-loading-text="Please wait...">Send your message</button>
+                <button type="reset" class="btn btn-default btn-flat btn-theme-colored">Reset</button>
+              </div>
+            </form>
+            <!-- Contact Form Validation-->
+            <script type="text/javascript">
+              $("#contact_form").validate({
+                submitHandler: function(form) {
+                  var form_btn = $(form).find('button[type="submit"]');
+                  var form_result_div = '#form-result';
+                  $(form_result_div).remove();
+                  form_btn.before('<div id="form-result" class="alert alert-success" role="alert" style="display: none;"></div>');
+                  var form_btn_old_msg = form_btn.html();
+                  form_btn.html(form_btn.prop('disabled', true).data("loading-text"));
+                  $(form).ajaxSubmit({
+                    dataType:  'json',
+                    success: function(data) {
+                      if( data.status == 'true' ) {
+                        $(form).find('.form-control').val('');
+                      }
+                      form_btn.prop('disabled', false).html(form_btn_old_msg);
+                      $(form_result_div).html(data.message).fadeIn('slow');
+                      setTimeout(function(){ $(form_result_div).fadeOut('slow') }, 6000);
+                    }
+                  });
+                }
+              });
+            </script>
+          </div>
+        </div>
+      </div>
+    </section> #}
+<section id="portfolio" class="wow fadeInUp animated" style="visibility: visible;">
+      <div class="container shadow_portfolio">
+        <div class="row">
+          <div class="col-md-12 m-t-10" style="">
+            <h2 class="txt_col text-center m-t-20" style="font-size: 26px;">
+              <span style="font-weight:bold !important; font-size: 26px !important; color: #fff;">CONTACTEZ-NOUS</span>
+              <br>
+              <i class="fa fa-minus" style="color: rgba(255, 255, 255, 0.6);"></i>
+            </h2>
+          </div>
+        </div>
+        <div class="row" style="background: #181818; padding: 5px; margin-bottom: 5PX;">
+          <div class="col-md-4 m-t-10 flex_bloc text-center">
+            <div class="" style="color: #ffffff99;">
+              <i class="fa fa-map" style="font-size: 45px !important; color: #c89629 !important; margin-bottom: 5px !important;"></i>
+              <br>
+              Cocody, abidjan Côte d'Ivoire
+            </div>
+          </div>
+          <div class="col-md-4 m-t-10 flex_bloc text-center">
+            <div class="" style="color: #ffffff99;">
+              <i class="fa fa-phone-square" style="font-size: 45px !important; color: #c89629 !important; margin-bottom: 5px !important;"></i>
+              <br>
+              +225 0758125273/0151238430
+            </div>
+          </div>
+          <div class="col-md-4 m-t-10 flex_bloc text-center">
+            <div class="" style="color: #ffffff99;">
+              <i class="fa fa-paper-plane" style="font-size: 45px !important; color: #c89629 !important; margin-bottom: 10px !important;"></i>
+              <br>
+              Asaphpro2021@gmail.com
+            </div>
+          </div>
+          <div class="col-md-8 flex_bloc m-t-20" style="">
+            <div class="">
+              <iframe src="https://www.google.com/maps/embed?NSAZE5smASgcazLB9" width="100%" height="290" style="border:0; background:#242424; padding:5px; border-radius:none;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+          </div>
+          <div class="col-md-4 text-center">
+            <div class="text-center m-t-20" style="background: #242424; padding: 10px; margin-bottom: 10px;">
+              <form action="https://eliwoodstudio.com/sendMail" class="m-t-15" method="POST">
+                <input type="hidden" name="_token" value="cevaYdi7ZaMfSW8bnjOKhegX1Y8sxgWlGeplxpV3">           
+                    <div class="form-group">
+                     <label >Nom</label>
+                <input class="form-control" name="expediteur" value="" placeholder="Entrez votre nom" style="color: white !important;">
+                
+                    </div>
+                <label class="">E-mail</label>
+                <input class="form-control" style="color: white !important;" type="email" name="expMail" placeholder="Votre Email" value="">
+                
+                <label class="">Message</label>
+                <textarea class="form-control" style="color: white !important;" placeholder="Entrez votre message" name="messageContent"></textarea><br>
+                
+                <button type="submit" name="send" value="send" class="form-control btn btn-default m-t-10" style="color:#fff; background:#FAD96B">Envoyer</button>
+
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>

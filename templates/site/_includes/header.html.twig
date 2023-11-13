@@ -1,0 +1,46 @@
+ {% set etat = etat %}
+
+  <header class="header">
+    <div class="header-nav navbar-fixed-top navbar-dark navbar-transparent navbar-sticky-animated animated-active">
+      <div class="header-nav-wrapper">
+        <div class="container">
+          <nav id="menuzord-right" class="menuzord green">
+            <a class="menuzord-brand pull-left flip" href="javascript:void(0)">
+                <img src="logo.png" alt="">
+                {#<h4>UFRSEG</h4>#}
+            </a>
+            <ul class="menuzord-menu">
+             <li {% if etat == 1 %} class="active" {% endif %}><a href="{{ path('site_home')}}">Accueil</a></li> 
+
+              <li {% if etat == 4 %} class="active" {% endif %}><a href="#schedule">Présentation</a></li>
+              <li {% if etat == 4 %} class="active" {% endif %}><a href="#schedule">Nos formations</a></li>
+              <li {% if etat == 4 %} class="active" {% endif %}><a href="#schedule">Recherche</a></li>
+              <li {% if etat == 4 %} class="active" {% endif %}><a href="#schedule">Etudiant</a></li>
+
+           
+               <li {% if etat == 5 %} class="active" {% endif %}><a href="#">Médiatheque</a>
+                    <ul class="dropdown">
+                      <li><a href="index-mp-layout1.html">Phototheque</a></li>
+                      <li><a href="index-mp-layout2.html">Videotheque</a></li>
+                    </ul>
+             </li>
+          
+              <li {% if etat == 6 %} class="active" {% endif %}><a href="#contact">Contact</a></li>
+
+             {# <li style="margin-left: 3px;"><a class="btn btn-default  btn-xs text-uppercase font-13 " style="color:#fff; background:green;" href="#"><i class="fa fa-user"></i></a>
+
+              
+                <ul class="dropdown">
+                      <li><a href="index-mp-layout1.html">se connecter</a></li>
+                      <li><a href="index-mp-layout2.html">Créer un compte</a></li>
+                    </ul>
+              </li>&nbsp;#}
+              <li><a class="btn btn-default  btn-xs text-uppercase font-13 "  style="color:#fff; background:green;" href="{{ path("site_inscription") }}"><i class="fa fa-user"></i>S'inscrire</a></li>
+              <li><a class="btn btn-default  btn-xs text-uppercase font-13 " style="color:#fff; background:#FAD96B;margin-left: 5px;" href="{{ path('site_login_site') }}"><i class="fa fa-users"></i>Se connecter</a></li>
+              {# <li><a class="btn btn-default  btn-xs text-uppercase font-13 " style="color:#fff; background:#FAD96B" href="#">FAIRE UN DON</a></li> #}
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
